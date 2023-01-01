@@ -28,9 +28,19 @@ h1{
     color: black;
 }
 
+.first-par-home {
+    display:flex;
+    vertical-align: top;
+}
+
 .blogpost {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .blogpost .title {

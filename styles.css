@@ -141,3 +141,25 @@ img {
 from, to { border-color: orange }
 50% { border-color: transparent; }
 }
+
+/* button */
+.btn {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    transition: all .6 ease-out;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 15px;
+
+    background: linear-gradient(to right, rgb(86, 86, 86) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.btn:hover {
+    background-position: left bottom;
+    color: orange;
+}

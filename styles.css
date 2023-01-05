@@ -4,13 +4,14 @@
 
 @custom-media --min-sm (width >= 768px);
 
+
 html,
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(14, 14, 14);
     color: rgb(243, 243, 243);
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 7%;
+    margin-right: 7%;
   }
 
 /* get rid of link underlines */
@@ -512,7 +513,6 @@ from, to { border-color: transparent }
     cursor: pointer;
     backface-visibility: visible;
     margin-top: 40px;
-    left: 50%;
   }
   
   .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
@@ -520,7 +520,7 @@ from, to { border-color: transparent }
     position: absolute;
     width: 45px;
     height: 100%;
-    top: 0; left: 0;
+    top: 0; left: 50%;
     transform-origin: left center;
     transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
   }

@@ -21,9 +21,9 @@
         </ul>
     </nav>
 
-<div class="typewriter"><h1>Constructed Language (Coming Soon)</h1></div>
+<div class="typewriter"><h1>Ithaneian (Coming Soon)</h1></div>
 
-<p>I am currently in the process of constructed my own constructed language. This is a work in progress.</p>
+<p>I am currently in the process of constructed my own constructed language, called <i>Ithaneian</i>, coming from the root <i>ithan-</i> in its language which refers to light. In this language, light often has incredibly descriptive meanings and distinctions. This is a work in progress.</p>
 
 <h1>Consonant Phonetics</h1>
 <table style="text-align:center;">
@@ -89,6 +89,132 @@
     </tr>
 
 </table>
+
+
+<h1>Vowel Phonetics</h1>
+The following is the table of vowel phonetics, which for this language has roughly been modeled after Armenian vowels, with the notable omission of the mid central vowel (ը or ə in IPA).
+<table style="text-align:center;">
+    <tr>
+        <th></th>
+        <th>Front</th>
+        <th>Back Unrounded</th>
+        <th>Back Rounded</th>
+    </tr>
+    <tr>
+        <th>Close</th>
+        <th>i</th>
+        <th></th>
+        <th>u</th>
+    </tr>
+    <tr>
+        <th>Mid</th>
+        <th>ɛ</th>
+        <th></th>
+        <th>ɔ</th>
+    </tr>
+    <tr>
+        <th>Open</th>
+        <th></th>
+        <th>ɑ</th>
+        <th></th>
+    </tr>
+
+</table>
+
+<h1>Grammar</h1>
+
+<h2>Word Order</h2>
+Generally, Ithaniean follows a SOV word order, but emphasis can be added to the object by instead using an OVS order.
+
+<h2>Noun Declension</h2>
+Nouns in Ithaneian exist within 5 cases: nominative, accusative, dative, genitive, and instrumental. There are no genders in the language, but some nouns do have irregular declensions.
+
+
+
+
+<h2>Verb Conjugation</h2>
+There are 3 common verb endings: <i>-eman</i>, <i>-iman</i>, and <i>-aman</i>. All verbs other than <i>eteman</i> (to be), <i>kiman</i> (to have), and <i>ithaman</i> (to shine, used in many colloquial phrases) are conjugated according to their verb ending.
+
+<h3>Passive Voice</h3>
+There is no stand-alone passive voice. Instead, a verb can be turned passive by adding a <i>-v-</i> between the verb root and its ending.
+
+
+
+<!-- DICTIONARY SECTION -->
+
+<div class="dictionary-container">
+    <h1>English-Ithaneian Dictionary</h1>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Enter a word..." />
+        <select id="language-select">
+            <option value="en">English-Ithaneian</option>
+            <option value="ith">Ithaneian-English</option>
+        </select>
+        <button onclick="searchWord()">Search</button>
+    </div>
+    <ul class="word-list" id="word-list">
+        <!-- Words and definitions will be dynamically added here -->
+    </ul>
+</div>
+
+<script>
+const wordDictionary = {
+    en: {
+        "hello": "Ithanur theon man.",
+        world: "The earth and all its inhabitants.",
+        "to be": "Eteman.",
+        "be": "Eteman.",
+        "to have": "Kiman.",
+        "have": "Kiman.",
+        "has": "Kiman.",
+        "to shine": "Ithaman"
+    },
+    ith: {
+        "ithanur theon man": "Hello - A greeting, literally meaning light be with you.",
+        "eteman": "To be.",
+        "kiman": "To have.",
+        "ithaman": "To shine.",
+        world: "Mundo - La tierra y todos sus habitantes."
+    }
+};
+
+function searchWord() {
+    const word = document.getElementById('search-input').value.trim().toLowerCase();
+    const language = document.getElementById('language-select').value;
+
+    if (!word) {
+        alert('Please enter a word to search!');
+        return;
+    }
+
+    const wordList = document.getElementById('word-list');
+
+    // Clear existing list (optional)
+    wordList.innerHTML = '';
+
+    // Look up the word in the dictionary
+    if (wordDictionary[language] && wordDictionary[language][word]) {
+        const listItem = document.createElement('li');
+        listItem.className = 'word-item';
+        listItem.innerHTML = `
+            <span class="word-title">${word} (${language})</span><br>
+            <span>${wordDictionary[language][word]}</span>
+        `;
+        wordList.appendChild(listItem);
+    } else {
+        const listItem = document.createElement('li');
+        listItem.className = 'word-item';
+        listItem.innerHTML = `
+            <span class="word-title">${word} (${language})</span><br>
+            <span>No translational equivalent found.</span>
+        `;
+        wordList.appendChild(listItem);
+    }
+}
+
+</script>
+<!-- END OF DICTIONARY SECTION -->
+
 
 <!-- Default Statcounter code for My personal website http://aaf101.github.io
 -->

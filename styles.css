@@ -804,6 +804,12 @@ from, to { border-color: transparent }
   border-color: orange;
 }
 
+.badge-accepted{
+  color: white;
+  background: black;
+  border-color: orange;
+}
+
 .badge-underreview{
   color: #fff;
   background: rgba(0, 135, 202, 0.18);

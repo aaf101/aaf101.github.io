@@ -54,6 +54,7 @@
     </p>
 
     <div class="paper-links">
+      <a class="btn btn-small" href="https://www.cambridge.org/core/journals/econometric-theory/article/robust-bayes-treatment-choice-with-partialidentification/4125FE898E298193C00B107953D36ECC">Journal Link</a>
       <a class="btn btn-small" href="https://arxiv.org/abs/2408.11621">arXiv</a>
       <!-- Optional: add a local PDF link if you host it -->
       <!-- <a class="btn btn-small" href="/files/robust_bayes_treatment_choice.pdf">PDF</a> -->
@@ -109,6 +110,8 @@
     </p>
 
     <div class="paper-links">
+      
+      
       <a class="btn btn-small" href="https://arxiv.org/abs/2511.16925">arXiv</a>
     </div>
   </article>
@@ -143,7 +146,7 @@
     
   </article>
 
-
+<!--
   <article class="paper-card paper-card-muted">
     <div class="paper-top">
       <h3 class="paper-title">Empirical Bayes and Gaussian Deconvolution Over Varying Variance</h3>
@@ -160,10 +163,93 @@
 
     <div class="paper-links">
       <a class="btn btn-small btn-ghost" href="mailto:aradilla@mit.edu">Email for draft</a>
-      <!-- Optional: if you later host a PDF -->
-      <!-- <a class="btn btn-small" href="/files/transfer_performance_using_bayes_latest.pdf">PDF</a> -->
+
     </div>
   </article>
+-->
+
+<!--        EOS AT MIRROR DESCENT         -->
+<article class="paper-card paper-card-muted">
+    <div class="paper-top">
+      <h3 class="paper-title">Mirror Descent Framework for Edge of Stability</h3>
+      <span class="badge badge-wip">In Progress</span>
+    </div>
+
+    <p class="paper-meta">
+      Working draft
+    </p>
+
+    <p class="paper-abstract">
+      We train a fully-connected multilayer perceptron with two hidden layers on the CIFAR-10 dataset. To train this model, we implement full-batch gradient descent (GD), stochastic gradient descent (SGD), Adam, and various other mirror descent optimizers, varying the learning rate to investigate the sensitivity of Edge of Stability (EoS) phenomena. We find limited evidence that mirror descent routines, when trained on the same dataset and optimizing the same neural architecture, trains at the EoS, while we are able to reproduce full-batch GD results from Cohen et al. (2021). Our results suggest non-GD mirror descent routines may not train at EoS as often as full-batch GD.
+    </p>
+
+    <div class="paper-links">
+      <a class="btn btn-small" href="files/EOS_Mirror_Descent.pdf">PDF</a>
+    </div>
+  </article>
+
+
+  <!--        CTS EPSILON MINIMAX        -->
+<article class="paper-card paper-card-muted">
+    <div class="paper-top">
+      <h3 class="paper-title">Epsilon-Minimax Solutions of Statistical Decision Problems Using Generalized Hedge</h3>
+      <span class="badge badge-wip">In Progress</span>
+    </div>
+
+    <p class="paper-meta">
+      Working draft
+    </p>
+
+    <p class="paper-abstract">
+Previous work has established how $\epsilon$-minimax optimal decision rules can be approximated using the Hedge algorithm, also known as entropic mirror descent, when the menu of decision rules is finite. The main restriction in that approach is the decision space must be finite. This paper connects generalized Hedge on a continuum to minimax problems in statistical decision theory. The resulting algorithm randomizes over a compact decision space, uses a nature oracle as in finite-menu Hedge, and obtains an ex-ante $\epsilon$-minimax guarantee under boundedness, risk Lipschitz continuity, and a local mass condition on the reference measure, weakening existing assumptions needed for theoretical guarantees of generalized Hedge. Computational examples illustrate exact continuous implementation, numerical integration with approximation error, robust Bayes treatment choice with a continuous threshold class, empirical welfare maximization with Oregon Health Insurance Experiment data, and network diffusion targeting with Indian village microfinance data.    </p>
+
+    <div class="paper-links">
+      <a class="btn btn-small btn-ghost" href="mailto:aradilla@mit.edu">Email for draft</a>
+    </div>
+  </article>
+
+
+  
+
+
+  <!--        EOS FOR DML             -->
+          
+<article class="paper-card paper-card-muted">
+    <div class="paper-top">
+      <h3 class="paper-title">Debiased Machine Learning at the Edge of Stability</h3>
+      <span class="badge badge-wip">In Progress</span>
+    </div>
+
+    <p class="paper-meta">
+      Working draft
+    </p>
+
+    <p class="paper-abstract">
+Neural nuisance learners used in debiased machine learning (DML) are usually summarized
+by prediction rates, while the training dynamics that generate those predictions are treated
+as implementation details. This paper develops a diagnostic framework for the case in which
+a nuisance learner is trained near the Edge of Stability (EoS), the regime in which gradient
+descent oscillates around a learning-rate-dependent sharpness threshold. The bridge rests on two
+exact identities: the population regression loss and the population Riesz loss calibrate exactly
+to the squared L2(P) nuisance errors entering the DML product remainder. Combining these
+identities with the central-flow model of Cohen et al. (2025) gives local sufficient conditions under
+which stability-constrained optimization progress implies semiparametric remainder control. For
+shared RieszNet architectures (Chernozhukov et al., 2022a), the main result decomposes the
+time-averaged nuisance bias into a central excess-risk term and an EoS covariance term governed
+by mode variance and cross-head prediction alignment. The theory distinguishes three inferential
+regimes: EoS is first-order benign when the signed product is $o_p(n^{
+−1/2})$; it shifts the limiting
+center when the product is root-n visible; and bias-aware intervals remain valid when the product
+can be bounded but not ignored. Simulations and an application show how sharpness, output averaging,
+baseline DML estimates, and signed prediction products can be monitored in practice.    </p>
+
+    <div class="paper-links">
+      <a class="btn btn-small btn-ghost" href="mailto:aradilla@mit.edu">Email for draft</a>
+    </div>
+  </article>
+
+
+
 
 
   <article class="paper-card paper-card-muted">

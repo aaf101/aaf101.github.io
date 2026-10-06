@@ -399,10 +399,7 @@ from, to { border-color: transparent }
         animation: rotate-text-up 1.5s 7s;
         }
     .rotatingText-adjective:nth-of-type(7) { 
-        animation: rotate-text-up 1.5s 8.25s;
-        }
-    .rotatingText-adjective:nth-of-type(8) { 
-    animation: fade-text-in 1.5s 9.5s forwards;
+    animation: fade-text-in 1.5s 8.25s forwards;
     }
   
   @keyframes rotate-text-up { 

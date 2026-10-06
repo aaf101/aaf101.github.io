@@ -7,6 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 </style>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  async>
+</script>
 </head>
 <body>
     <nav class="navbar">
@@ -81,16 +94,19 @@
     <p class="paper-meta">
       With Jos&eacute; Blanchet, Jos&eacute; Luis Montiel Olea, J&ouml;rg Stoye, Chen Qiu, and Lezhi Tan
       <span class="meta-sep">•</span>
-      <span class="venue">Journal of Econometrics</span>
+      <span class="venue">Journal of Econometrics, Extended Abstract Publisedh in EC '25</span>
     </p>
 
     <p class="paper-abstract">
-      A decision rule is epsilon-minimax if it is minimax up to an additive factor epsilon. We present an algorithm for provably obtaining epsilon-minimax solutions for a class of statistical decision problems. In particular, we are interested in problems where the statistician chooses randomly among I decision rules. The minimax solution of these problems admits a convex programming representation over the (I-1)-simplex. Our suggested algorithm is a well-known mirror subgradient descent routine, designed to approximately solve the convex optimization problem that defines the minimax decision rule. This iterative routine is known in the computer science literature as the hedge algorithm and is used in algorithmic game theory as a practical tool to find approximate solutions of two-person zero-sum games. We apply the suggested algorithm to different minimax problems in the econometrics literature. An empirical application to the problem of optimally selecting sites to maximize the external validity of an experimental policy evaluation illustrates the usefulness of the suggested procedure.
+      A decision rule is $\epsilon$-minimax if it is minimax up to an additive factor epsilon. We present an algorithm for provably obtaining epsilon-minimax solutions for a class of statistical decision problems. In particular, we are interested in problems where the statistician chooses randomly among I decision rules. The minimax solution of these problems admits a convex programming representation over the $(I-1)$-simplex. Our suggested algorithm is a well-known mirror subgradient descent routine, designed to approximately solve the convex optimization problem that defines the minimax decision rule. This iterative routine is known in the computer science literature as the hedge algorithm and is used in algorithmic game theory as a practical tool to find approximate solutions of two-person zero-sum games. We apply the suggested algorithm to different minimax problems in the econometrics literature. An empirical application to the problem of optimally selecting sites to maximize the external validity of an experimental policy evaluation illustrates the usefulness of the suggested procedure.
     </p>
 
     <div class="paper-links">
       <a class="btn btn-small" href="https://arxiv.org/abs/2509.08107">arXiv</a>
       <a class="btn btn-small" href="/files/epsilon_minimax_squint.pdf">Related Note</a>
+      <a class="btn btn-small" href="https://dl.acm.org/doi/10.1145/3736252.3742598
+">Extended Abstract (EC '25)</a>
+
     </div>
   </article>
 
@@ -99,7 +115,7 @@
       <h3 class="paper-title">
         Approximate Least-Favorable Distributions and Nearly Optimal Tests via Stochastic Mirror Descent
       </h3>
-      <span class="badge badge-underreview">Under Review</span>
+      <span class="badge badge-underreview">Working Paper</span>
     </div>
 
     <p class="paper-meta">
@@ -107,7 +123,7 @@
     </p>
 
     <p class="paper-abstract">
-      We consider a class of hypothesis testing problems where the null hypothesis postulates M distributions for the observed data, and there is only one possible distribution under the alternative. We show that one can use a stochastic mirror descent routine for convex optimization to provably obtain - after finitely many iterations - both an approximate least-favorable distribution and a nearly optimal test, in a sense we make precise. Our theoretical results yield concrete recommendations about the algorithm's implementation, including its initial condition, its step size, and the number of iterations. Importantly, our suggested algorithm can be viewed as a slight variation of the algorithm suggested by Elliott, Müller, and Watson (2015), whose theoretical performance guarantees are unknown.
+      We consider a class of hypothesis testing problems where the null hypothesis postulates $M$ distributions for the observed data, and there is only one possible distribution under the alternative. We show that one can use a stochastic mirror descent routine for convex optimization to provably obtain - after finitely many iterations - both an approximate least-favorable distribution and a nearly optimal test, in a sense we make precise. Our theoretical results yield concrete recommendations about the algorithm's implementation, including its initial condition, its step size, and the number of iterations. Importantly, our suggested algorithm can be viewed as a slight variation of the algorithm suggested by Elliott, Müller, and Watson (2015), whose theoretical performance guarantees are unknown.
     </p>
 
     <div class="paper-links">
@@ -118,6 +134,35 @@
   </article>
 
 
+
+
+  <article class="paper-card">
+    <div class="paper-top">
+      <h3 class="paper-title">
+        Pragmatic DML with AI-Learned Representations
+      </h3>
+      <span class="badge badge-underreview">Working Paper</span>
+    </div>
+
+    <p class="paper-meta">
+      With Victor Chernozhukov, Carlos Cinelli, Sven Klaassen, Whitney Newey, Martin Spindler, Jan Teichert-Kluge, and Suhas Vijaykumar
+    </p>
+
+    <p class="paper-abstract">
+      Text, images, and other rich covariates are increasingly compressed into AI-learned representations and then used as controls in causal analysis. We study when this approach is valid and develop a practical framework for causal inference with learned representations. For a broad class of estimands, an imperfect representation distorts the target causal parameter by the product of two representation errors: one in the outcome regression and one in the balancing weight (or Riesz representer). This yields three constructive results. First, cross-fitted double machine learning (DML) provides valid Wald inference for the representation-dependent target. When representation errors are small, the same interval covers the causal parameter, and it can even attain the semiparametric efficiency bound. Second, fold-wise representation learning (or fine-tuning) is compatible with DML inference for the causal parameter. To this end, we develop convex- and star-aggregation pipelines for learning and combining representations. Third, when representation errors are substantial, we can provide interpretable sensitivity regions and root-$n$ inference for their endpoints. In a multi-modal demand application, seven representation-specific estimates and their star aggregate all imply a negative near-unit elasticity for rank-based price response, and the result remains robust over the reported sensitivity grid.
+    </p>
+
+    <div class="paper-links">
+      
+      
+      <a class="btn btn-small" href="https://arxiv.org/pdf/2610.01935">arXiv</a>
+    </div>
+  </article>
+
+
+
+
+
   <!-- ===================== Works in Progress ===================== -->
   <header class="section-header section-header-tight">
     <h2 class="section-title">Works in Progress</h2>
@@ -126,8 +171,8 @@
 
   <article class="paper-card paper-card-muted">
     <div class="paper-top">
-      <h3 class="paper-title">Limited Consideration through Salience</h3>
-      <span class="badge badge-wip">In Progress</span>
+      <h3 class="paper-title">Econometrics of Salience</h3>
+      <span class="badge badge-wip">Draft coming soon!</span>
     </div>
 
     <p class="paper-meta">
@@ -190,8 +235,7 @@
     </div>
   </article>
 
-
-  <!--        CTS EPSILON MINIMAX        -->
+<!-- 
 <article class="paper-card paper-card-muted">
     <div class="paper-top">
       <h3 class="paper-title">Epsilon-Minimax Solutions of Statistical Decision Problems Using Generalized Hedge</h3>
@@ -209,12 +253,11 @@ Previous work has established how $\epsilon$-minimax optimal decision rules can 
       <a class="btn btn-small btn-ghost" href="mailto:aradilla@mit.edu">Email for draft</a>
     </div>
   </article>
-
+ -->
 
   
 
-
-  <!--        EOS FOR DML             -->
+<!-- 
           
 <article class="paper-card paper-card-muted">
     <div class="paper-top">
@@ -248,7 +291,7 @@ baseline DML estimates, and signed prediction products can be monitored in pract
     <div class="paper-links">
       <a class="btn btn-small btn-ghost" href="mailto:aradilla@mit.edu">Email for draft</a>
     </div>
-  </article>
+  </article> -->
 
 
 
@@ -296,10 +339,10 @@ baseline DML estimates, and signed prediction products can be monitored in pract
 <p>From January 2022 to January 2023, I was an Undergraduate Researcher at the Labor Dynamics Institute at Cornell University under Professor Lars Vilhuber. In this work, I replicated numerous economics research papers submitted to a variety of American Economics Association Journals (e.g., AEJ, AER, AEP, etc.), making use of version-control softwares such as GitHub, Bitbucket, and Code Ocean. I also made heavy use of Stata, R, Python, and Matlab. Aside from replication of papers, I also contributed to the replication template used by all of the research assistants in the Replication Lab. The GitHub to said template is linked below.</p>
 <a href="https://github.com/AEADataEditor/replication-template-development"><button class="btn">LDI Replication Template</button></a>
 
-<h2 style="text-align: left">PRIMO Research Lecture</h2>
+<!-- <h2 style="text-align: left">PRIMO Research Lecture</h2>
 <p>From June to August 2022, I was a PRIMO Research Fellow at the Harvard Business School, paired with Professor Kyle Myers. In that work, I performed preliminary synthetic control regressions on clinical trial data to answer the following question: Does the market overreact to deaths in gene therapy clinical trials? The position culminated in a presentation given to PRIMO fellows, as well as graduate students and faculty of HBS. The presentation, written in LaTeX Beamer, is attached below. The slides show some of the limitations of synthetic control methods.</p>
 <a href="/files/primo_pres.pdf" download><button class="btn">Presentation Slides (PDF)</button></a>
-
+ -->
 
 <div class='typewriter'><h1>Other Work</h1></div>
 
@@ -385,7 +428,7 @@ h2 style="text-align: left">Preliminary Oil Futures Literature Review</h2>
     </div>
 </div>
 <div style="margin-top:80px"></div>
-<p style="text-align: center">email : <a href="mailto: aa2679@cornell.edu" style="color:white;">aa2679@cornell.edu</a></p>
+<p style="text-align: center">email : <a style="color:white;">aradilla AT mit DOT edu</a></p>
 <p style="text-align: center">phone : +1 (814) 826-5231</p>
 <p style="text-align:center;">&copy; Copyright Andr&eacute;s Aradillas Fern&aacute;ndez 2026</p>
 <hr style="height:5px;visibility: hidden;"/>

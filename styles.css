@@ -760,7 +760,8 @@ from, to { border-color: transparent }
   margin: 0;
   font-size: 15.5pt;
   line-height: 1.25;
-  font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
 }
 
 .paper-meta{
